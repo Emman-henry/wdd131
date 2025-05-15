@@ -1,0 +1,102 @@
+/* 768px to 911px: 2 columns */
+@media (min-width: 768px) and (max-width: 911px) {
+  .albumns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 912px and up: 3 columns */
+@media (min-width: 912px) {
+  .albumns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Header and general layout tweaks for 768px and above */
+@media (min-width: 768px) {
+  /* Header container as flex */
+  header {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background-color: #003366; /* keep header bg consistent */
+  }
+
+  /* Header title left aligned */
+  .header-title {
+    justify-self: flex-start;
+  }
+
+  .header-title h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: white;
+  }
+
+  /* Navigation visible and right aligned */
+  .header-nav {
+    display: block !important;
+    margin-top: 0;
+  }
+
+  .header-nav nav ul {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 2rem;
+    font-size: 5rem;
+    gap: 7rem;
+  }
+
+  .header-nav nav ul li {
+    margin: 0;
+    list-style: none;
+  }
+
+  .header-nav nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Hide hamburger menu */
+  #menu-toggle {
+    display: none;
+  }
+
+ 
+  /* Body title tweaks */
+   .body-title{
+    display: flex;
+    justify-content: center;
+   
+  }
+  .body-title h1 {
+    font-size: 5rem;
+    margin-left: 2rem;
+    color: #333;
+    padding: 2rem;
+  }
+
+  /* Album grid adjustments */
+  .albumns {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .albumns img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    
+    margin: 2rem;
+  }
+
+  .albumns img:hover {
+    transform: scale(1.03);
+  }
+}
