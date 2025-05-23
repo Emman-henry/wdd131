@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Two-Column Layout</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Emmanuel Henry | learning css and home page design">
+  <meta name="author" content="Emmanuel Henry">
   <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
   <header>
@@ -16,7 +19,7 @@
         <ul>
           <li><a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/"> LinkedIn </a></li>
           <li><a href="https://portal.byupathway.edu/CMCPortal/secure/student/stuportal.aspx">Canvas</a></li>
-          <li><a href="#">Scripture</a></li>
+          <li><a href="https://www.churchofjesuschrist.org/?lang=eng">Scripture</a></li>
           <li><a href="#">Final Project</a></li>
         </ul>
       </nav>
@@ -68,8 +71,10 @@
     </section>
   </main>
   <footer>
-    ©2025 Emmanuel Henry Nigeria
-    <p>last modification: 15/05/2025 15:59:33</p>
+    <p>
+    &copy; <span id="currentyear"></span> Emmanuel Henry, Nigeria
+  </p>
+    <p id="lastModified"></p>
   </footer>
 </body>
 </html>
