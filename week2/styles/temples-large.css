@@ -1,3 +1,5 @@
+/* Media Queries using variables for consistent styles */
+
 /* 768px to 911px: 2 columns */
 @media (min-width: 768px) and (max-width: 911px) {
   .albumns {
@@ -12,9 +14,9 @@
   }
 }
 
-/* Header and general layout tweaks for 768px and above */
+/* Layout tweaks for devices 768px and above */
 @media (min-width: 768px) {
-  /* Header container as flex */
+  /* Header layout */
   header {
     height: 250px;
     display: flex;
@@ -22,21 +24,16 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 2rem;
-    background-color: #003366; /* keep header bg consistent */
-  }
-
-  /* Header title left aligned */
-  .header-title {
-    justify-self: flex-start;
+    background-color: var(--primary-color);
   }
 
   .header-title h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0;
-    color: white;
+    color: var(--white);
   }
 
-  /* Navigation visible and right aligned */
+  /* Navigation styling */
   .header-nav {
     display: block !important;
     margin-top: 0;
@@ -44,56 +41,64 @@
 
   .header-nav nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
     justify-content: flex-end;
     margin: 0;
-    padding: 2rem;
-    font-size: 5rem;
-    gap: 7rem;
+    padding: 2rem 0;
+    font-size: 1rem;
   }
 
   .header-nav nav ul li {
-    margin: 0;
     list-style: none;
   }
 
   .header-nav nav ul li a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
+    position: relative;
   }
 
-  /* Hide hamburger menu */
+  .header-nav nav ul li a:hover {
+    color: var(--accent-color);
+  }
+
+  .header-nav nav ul li a::after {
+    background-color: var(--white);
+  }
+
+  /* Hide mobile menu icon */
   #menu-toggle {
     display: none;
   }
 
- 
-  /* Body title tweaks */
-   .body-title{
+  /* Title section */
+  .body-title {
     display: flex;
     justify-content: center;
-   
-  }
-  .body-title h1 {
-    font-size: 5rem;
-    margin-left: 2rem;
-    color: #333;
-    padding: 2rem;
   }
 
-  /* Album grid adjustments */
+  .body-title h1,
+  .body-title h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    padding: 2rem 0;
+  }
+
+  /* Album grid layout */
   .albumns {
     gap: 1.5rem;
     padding: 2rem;
   }
 
   .albumns img {
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed) ease;
     cursor: pointer;
-    
-    margin: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .albumns img:hover {
