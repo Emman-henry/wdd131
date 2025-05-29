@@ -145,11 +145,17 @@ figcaption {
   color: var(--text-color);
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
   background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
   margin-top: 2rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
 }
