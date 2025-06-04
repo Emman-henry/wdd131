@@ -1,0 +1,29 @@
+header{
+    background-color: #008751;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero picture,
+.hero img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   object-position: top;
+  z-index: 0;
+}
+footer{
+    background-color:#008751 ;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
