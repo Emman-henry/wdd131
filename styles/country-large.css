@@ -1,5 +1,8 @@
-/* Larger screen (750px and above) — overlay on hero */
 @media (min-width: 750px) {
+  .weather-heading::before {
+    display: none; /* hide SVG icon on large */
+  }
+
   .weather-heading::after {
     content: "⛅ ";
     font-size: 1.2rem;
