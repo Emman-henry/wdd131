@@ -1,9 +1,33 @@
-header{
-    background-color: #008751;
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+:root {
+  --main-bg-color: #008751;
+  --text-color: white;
+  --card-bg-color: rgba(255, 255, 255, 0.95);
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  --card-radius: 10px;
+  --heading-padding: 0.75rem;
+   --weather-icon: url("images/weather.svg");
+}
+
+/* Base styles for all screen sizes */
+header {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.weather-heading::before {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: var(--weather-icon);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.4rem;
+  vertical-align: middle;
 }
 .hero {
   position: relative;
@@ -14,16 +38,79 @@ header{
 .hero picture,
 .hero img {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-   object-position: top;
+  object-position: top;
   z-index: 0;
 }
-footer{
-    background-color:#008751 ;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+
+/* Default for small screens (below 750px) */
+.sec1,
+.sec2 {
+  position: relative;
+  background-color: var(--card-bg-color);
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: var(--card-radius);
+  box-shadow: var(--box-shadow);
+  width: 80%;
+  max-width: 400px;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.sec1 h2,
+.sec2 h2 {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  text-align: center;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  padding: var(--heading-padding);
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+}
+
+/* Larger screen (750px and above) — overlay on hero */
+@media (min-width: 750px) {
+  .weather-heading::after {
+    content: "⛅ ";
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+  }
+
+  .sec1,
+  .sec2 {
+    position: absolute;
+    width: 300px;
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .sec1 {
+    top: 30px;
+    left: 30px;
+  }
+
+  .sec2 {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  main {
+    position: relative;
+  }
+}
+
+footer {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
 }
