@@ -1,97 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="description" content="WDD 131 – Country Page | Emmanuel Henry | learning css and Media query">
-    <meta name="author" content="Emmanuel Henry">
-    <link rel="stylesheet" href="styles/country.css">
-    <link rel="stylesheet" href="styles/country-large.css">
-    <script src="scripts/country.js" defer></script>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <meta name="description" content="WDD 131 – Country Page | Emmanuel Henry | learning css and Media query" />
+  <meta name="author" content="Emmanuel Henry" />
+  <link rel="stylesheet" href="styles/country.css" />
+  <link rel="stylesheet" href="styles/country-large.css" />
+  <script src="scripts/country.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>Nigeria</h1>
-    </header>
-    <main>
-        <section class="hero">
-          <picture>
-            <source srcset="images/new-img.webp" media="(min-width: 1000px)">
-            <source srcset="images/WhatsApp Image 2025-05-26 at 08.19.00_0b9b2213(1).webp" media="(min-width: 350px)">
-            <img src="images//WhatsApp Image 2025-05-26 at 08.19.00_0b9b2213(1).webp" alt="Description" width="100%" height="100vh">
-            </picture>
-        </section>
-        <section class="sec1">
-            <H2 class="Data">Data</H2>
-<table>
-  <tbody>
-    <tr>
-      <td>Area</td>
-      <td>Nigeria</td>
-    </tr>
-    <tr>
-      <td>Population</td>
-      <td>170,00000</td>
-    </tr>
-    <tr>
-      <td>Capital</td>
-      <td>Lagos</td>
-    </tr>
-    <tr>
-      <td>Languages</td>
-      <td>English</td>
-    </tr>
-    <tr>
-      <td>Currency</td>
-      <td>Naira</td>
-    </tr>
-    <tr>
-      <td>Time zone</td>
-      <td>Utc+3</td>
-    </tr>
-    <tr>
-        <td>Calling code</td>
-        <td>+234</td>
-    </tr>
-    <tr>
-        <td>Internet tld</td>
-        <td>.ng</td>
-    </tr>
-    </tbody>
-</table>
+  <header>
+    <h1>Nigeria</h1>
+  </header>
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/new-img.webp" media="(min-width: 1000px)" />
+        <source srcset="images/WhatsApp Image 2025-05-26 at 08.19.00_0b9b2213(1).webp" media="(min-width: 350px)" />
+        <img src="images/WhatsApp Image 2025-05-26 at 08.19.00_0b9b2213(1).webp" alt="Description" width="100%" height="100vh" />
+      </picture>
+    </section>
 
-</section>
-<section class="sec2">
-     <H2 class="weather-heading">Weather</H2>
-    <table>
+    <section class="sec1">
+      <h2 class="data-heading">Data</h2>
+      <table>
         <tbody>
-            <tr>
-                <td>Temperature</td>
-                <td id="temp">10c</td>
-            </tr>
-            <tr>
-                <td>condition</td>
-                <td>Sunny</td>
-            </tr>
-            <tr>
-                <td>Wind</td>
-                <td id="wind"></td>
-            </tr>
-            <tr>
-                <td>windchill</td>
-                <td id="windchill"></td>
-            </tr>
+          <tr><td>Area</td><td>Nigeria</td></tr>
+          <tr><td>Population</td><td>170,00000</td></tr>
+          <tr><td>Capital</td><td>Lagos</td></tr>
+          <tr><td>Languages</td><td>English</td></tr>
+          <tr><td>Currency</td><td>Naira</td></tr>
+          <tr><td>Time zone</td><td>UTC+3</td></tr>
+          <tr><td>Calling code</td><td>+234</td></tr>
+          <tr><td>Internet tld</td><td>.ng</td></tr>
         </tbody>
-    </table>
-</section>
-    </main>
-<footer>
-    <p> &copy; <span id="currentyear"></span> Emmanuel Henry, Nigeria </p>
+      </table>
+    </section>
+
+    <section class="sec2">
+      <h2 class="weather-heading">
+        <img src="images/weather.svg" alt="Weather icon" class="weather-icon" />
+        Weather
+      </h2>
+      <table>
+        <tbody>
+          <tr><td>Temperature</td><td id="temp">10°C</td></tr>
+          <tr><td>Condition</td><td>Sunny</td></tr>
+          <tr><td>Wind</td><td id="wind"></td></tr>
+          <tr><td>Windchill</td><td id="windchill"></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Emmanuel Henry, Nigeria</p>
     <p id="lastModified"></p>
-</footer>
+  </footer>
 </body>
 </html>

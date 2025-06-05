@@ -1,16 +1,24 @@
 :root {
-  --main-bg-color: #008751;
+  --primary-color: #008751;
   --text-color: white;
   --card-bg-color: rgba(255, 255, 255, 0.95);
   --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   --card-radius: 10px;
   --heading-padding: 0.75rem;
-   --weather-icon: url("images/weather.svg");
 }
 
-/* Base styles for all screen sizes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 header {
-  background-color: var(--main-bg-color);
+  background-color: var(--primary-color);
   color: var(--text-color);
   display: flex;
   justify-content: center;
@@ -18,17 +26,6 @@ header {
   padding: 1rem;
 }
 
-.weather-heading::before {
-  content: "";
-  display: inline-block;
-  width: 1.2rem;
-  height: 1.2rem;
-  background-image: var(--weather-icon);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 0.4rem;
-  vertical-align: middle;
-}
 .hero {
   position: relative;
   height: 100vh;
@@ -47,7 +44,6 @@ header {
   z-index: 0;
 }
 
-/* Default for small screens (below 750px) */
 .sec1,
 .sec2 {
   position: relative;
@@ -64,19 +60,57 @@ header {
 
 .sec1 h2,
 .sec2 h2 {
-  background-color: var(--main-bg-color);
+  background-color: var(--primary-color);
   color: var(--text-color);
   text-align: center;
   margin: -1.5rem -1.5rem 1rem -1.5rem;
   padding: var(--heading-padding);
   border-top-left-radius: var(--card-radius);
   border-top-right-radius: var(--card-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.weather-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Larger screen layout */
+@media (min-width: 750px) {
+  .sec1,
+  .sec2 {
+    position: absolute;
+    width: 300px;
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .sec1 {
+    top: 30px;
+    left: 30px;
+  }
+
+  .sec2 {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  main {
+    position: relative;
+  }
 }
 
 footer {
-  background-color: var(--main-bg-color);
+  background-color: var(--primary-color);
   color: var(--text-color);
   text-align: center;
   padding: 1rem;
 }
-
