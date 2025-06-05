@@ -73,44 +73,10 @@ header {
   border-top-right-radius: var(--card-radius);
 }
 
-/* Larger screen (750px and above) — overlay on hero */
-@media (min-width: 750px) {
-  .weather-heading::after {
-    content: "⛅ ";
-    font-size: 1.2rem;
-    margin-right: 0.3rem;
-  }
-
-  .sec1,
-  .sec2 {
-    position: absolute;
-    width: 300px;
-    max-width: 300px;
-    margin: 0;
-  }
-
-  .sec1 {
-    top: 30px;
-    left: 30px;
-  }
-
-  .sec2 {
-    bottom: 30px;
-    right: 30px;
-  }
-
-  .hero {
-    position: relative;
-  }
-
-  main {
-    position: relative;
-  }
-}
-
 footer {
   background-color: var(--main-bg-color);
   color: var(--text-color);
   text-align: center;
   padding: 1rem;
 }
+
