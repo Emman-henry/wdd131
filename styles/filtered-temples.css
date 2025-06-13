@@ -43,6 +43,11 @@ nav ul {
   justify-content: space-around;
   gap: 1rem;
 }
+nav ul li{
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+}
 
 nav ul li a {
   text-decoration: none;
