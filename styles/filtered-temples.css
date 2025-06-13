@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #003366;
+  --accent-color: #ffd700;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --white: #fff;
+
+  --font-family: 'Arial', sans-serif;
+
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 6px;
+  --transition-speed: 0.3s;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-title h1 {
+  font-size: 1.5rem;
+}

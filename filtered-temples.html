@@ -6,9 +6,8 @@
      <title>WDD 131 – Temple Albumn -Emmanuel Henry</title>
   <meta name="description" content="WDD 131 – Temple Albumn | Emmanuel Henry | learning css and Media query">
   <meta name="author" content="Emmanuel Henry">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filteredtemples.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,24 +15,19 @@
       <h1>Temple</h1>
     </div>
     <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
-<div class="header-nav" id="nav-menu">
-      <nav>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/emmanuel-henry-866ab9291/"> LinkedIn </a></li>
-          <li><a href="https://portal.byupathway.edu/CMCPortal/secure/student/stuportal.aspx">Canvas</a></li>
-          <li><a href="#">Scripture</a></li>
-          <li><a href="#">Final Project</a></li>
-          <li><a href="#">Final Project</a></li>
-        </ul>
-      </nav>
-    </div>
+<div class="filters">
+  <button id="home">Home</button>
+  <button id="old">Old</button>
+  <button id="new">New</button>
+  <button id="large">Large</button>
+  <button id="small">Small</button>
+</div>
     </header>
     <main>
     <div class="body-title">
       <h2>home</h2>
     </div>
-
-   
+    <div id="temples-container"></div>
     </main>
   <footer>
     <p>
