@@ -55,6 +55,31 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
+  {
+  templeName: "Mount Grace",
+  location: "Kyoto, Japan",
+  dedicated: "2009, March, 12",
+  area: 25000,
+  imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+},
+{
+  templeName: "Sunrise Peak",
+  location: "Cusco, Peru",
+  dedicated: "2017, September, 21",
+  area: 30500,
+  imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+},
+{
+  templeName: "Zion River",
+  location: "Nairobi, Kenya",
+  dedicated: "2015, November, 4",
+  area: 28800,
+  imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+}
+
   // Add more temple objects here...
 ];
 const container = document.querySelector('#temples-container');

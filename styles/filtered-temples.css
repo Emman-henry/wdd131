@@ -35,6 +35,7 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -43,10 +44,9 @@ nav ul {
   justify-content: space-around;
   gap: 1rem;
 }
-nav ul li{
-    color: var(--white);
-    display: flex;
-    justify-content: space-around;
+
+nav ul li {
+  color: var(--white);
 }
 
 nav ul li a {
@@ -62,6 +62,50 @@ nav ul li a:hover {
   background-color: #0077cc; /* Highlight color */
   color: #fff;
 }
+
 .header-title h1 {
   font-size: 1.5rem;
+}
+
+/* Temple Container - Mobile default (1 column, centered) */
+#temples-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Temple Card */
+.temple-card {
+  background-color: var(--background-color);
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 90%;
+  max-width: 400px;
+}
+.temple-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+}
+
+/* 768px to 911px: 2 columns */
+@media (min-width: 768px) and (max-width: 911px) {
+  #temples-container {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: stretch;
+  }
+}
+
+/* 912px and up: 3 columns */
+@media (min-width: 912px) {
+  #temples-container {
+    grid-template-columns: repeat(3, 1fr);
+    place-items: stretch;
+  }
 }
