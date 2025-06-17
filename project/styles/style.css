@@ -1,0 +1,47 @@
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #004aad;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.color-sample {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+section img {
+  display: block;
+  margin: 1rem auto;
+  width: 80%;        /* Reduce width for both images */
+  max-width: 400px;  /* Optional: max width control */
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.primary {
+  background-color: #004aad;
+}
+
+.secondary {
+  background-color: #f0f0f0;
+}
