@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+  </header>
+
+  <main>
+    <p>Your review has been submitted successfully.</p>
+    <p id="reviewCount"></p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Your Name | WDD 131</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    // Update and display review count
+    let count = localStorage.getItem("reviewCount");
+    count = count ? parseInt(count) + 1 : 1;
+    localStorage.setItem("reviewCount", count);
+    document.getElementById("reviewCount").textContent = `You have submitted ${count} review(s).`;
+
+    // Footer info
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+  </script>
+</body>
+</html>
