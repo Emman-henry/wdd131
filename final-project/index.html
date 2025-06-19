@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals-Emmanuel Henry</title>
+   <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Emmanuel Henry | learning css and home page design">
+  <meta name="author" content="Emmanuel Henry">
+  <link rel="stylesheet" href="styles/home.css" />
+  <script src="script/project.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+<button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <h1 class="nav-head">Bluedoc</h1>
+      <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="about.html">About </a></li>
+        <li><a href="rate.html">Rate Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <picture>
+      <source srcset="images/new-img.webp" media="(min-width: 1000px)" loading="lazy" />
+      <source srcset="images/small.webp" media="(min-width: 350px)" loading="lazy" />
+      <img src="images/small.webp" alt="Hero background" loading="lazy"/>
+    </picture>
+    <div class="hero-content">
+      <h2>Learn New Skills Online</h2>
+      <p>Join our free training to master graphic and video editing.</p>
+      <a href="register.html" class="btn">Join Us</a>
+    </div>
+  </section>
+
+  <!-- CURRICULUM SECTION -->
+  <section id="curriculum" class="curriculum">
+    <div class="curriculum-grid">
+      <div class="card">
+        <img src="images/small.webp" alt="Video Editing"loading="lazy">
+        <h3>Video Editing</h3>
+        <p>Learn CapCut and Adobe Premiere Pro to create stunning videos.</p>
+        <ul class="card-info">
+          <li>Evening Classes</li>
+          <li>Live Sessions</li>
+          <li>Practical Assignments</li>
+          <li>Certifications</li>
+          <li>Free Tools</li>
+          <li><strong>$20</strong> for Early Birds</li>
+          <li><strong>$31</strong> for Regular</li>
+        </ul>
+        <a href="register.html" class="btn">Learn More</a>
+      </div>
+
+      <div class="card">
+        <img src="images/small.webp" alt="Photo Editing"loading="lazy">
+        <h3>Photo Editing</h3>
+        <p>Master Canva and Photoshop for professional-quality images.</p>
+        <ul class="card-info">
+          <li>Evening Classes</li>
+          <li>Live Editing Sessions</li>
+          <li>Hands-on Projects (CapCut & Photoshop)</li>
+          <li>Free Stock Templates</li>
+          <li>Certificate of Completion</li>
+          <li><strong>$20</strong> Early Bird</li>
+          <li><strong>$31</strong> Regular</li>
+        </ul>
+        <a href="register.html" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+<section class="section2">
+  <h2>Why Choose BlueDoc</h2>
+
+  <div>
+    <div><h3 class="point1">Detail-Oriented</h3></div>
+    <div  class="pointlist">
+      <ul>
+        <li>BlueDoc ensures all students are carried along with practical examples that clarify concepts.</li>
+        <li>Lessons are designed to break down complex topics into simple, digestible parts.</li>
+        <li>Instructors pay close attention to individual progress and provide personalized feedback.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div><h3 class="point1">Highly Engaging</h3></div>
+    <div  class="pointlist">
+      <ul>
+        <li>Interactive sessions that encourage student participation and discussion.</li>
+        <li>Use of multimedia tools and real-life scenarios to maintain attention and relevance.</li>
+        <li>Live Q&A sessions to address student concerns immediately.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div><h3 class="point1">Career-Focused Training</h3></div>
+    <div class="pointlist">
+      <ul>
+        <li>Courses designed with industry demand in mind, preparing you for real jobs.</li>
+        <li>Project-based learning that builds your portfolio from day one.</li>
+        <li>Resume and job interview support after course completion.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div><h3 class="point1">Flexible & Affordable</h3></div>
+    <div class="pointlist">
+      <ul>
+        <li>Evening and weekend classes available to fit your schedule.</li>
+        <li>Early bird discounts and flexible payment plans.</li>
+        <li>Access to free tools and resources without hidden fees.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews">
+    <h2>User Reviews</h2>
+    <p>The following are all from real users — reviews submitted through the form below.</p>
+    <div class="review-grid">
+      <div class="review">
+        <img src="images/new-img.webp" alt="Jane Doe" class="review-img"loading="lazy">
+        <div class="review-text">
+          <p>Loved the video editing training, very helpful!</p>
+          <span>- Jane Doe</span>
+        </div>
+      </div>
+      <div class="review">
+        <img src="images/new-img.webp" alt="John Smith" class="review-img"loading="lazy">
+        <div class="review-text">
+          <p>Excellent Photoshop module!</p>
+          <span>- John Smith</span>
+        </div>
+      </div>
+      <div class="review">
+        <img src="images/new-img.webp" alt="Mary Lee" class="review-img"loading="lazy">
+        <div class="review-text">
+          <p>I now edit like a pro. Thank you!</p>
+          <span>- Mary Lee</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 1rem;">
+      <a href="rate.html" class="btn">Rate Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> SkillHub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

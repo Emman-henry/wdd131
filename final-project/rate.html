@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals-Emmanuel Henry</title>
+   <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Emmanuel Henry | learning css and home page design">
+  <meta name="author" content="Emmanuel Henry">
+  <link rel="stylesheet" href="styles/home.css" />
+  <script src="script/project.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+<button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <h1  class="nav-head">Bluedoc</h1>
+      <nav class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Curriculum</a></li>
+        <li><a href="about.html">About </a></li>
+        <li><a href="rate.html">Rate Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  </header>
+ 
+  <main>
+    <div class="rate-form">
+    <form action="submit.html" method="get">
+      <!-- Product Name -->
+      <label for="productName">Product Name:</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Options will be populated by JavaScript -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating:</legend>
+        <label><input type="radio" id="star1" name="rating" value="1" required>☆</label>
+        <label><input type="radio" id="star2" name="rating" value="2">☆☆</label>
+        <label><input type="radio" id="star3" name="rating" value="3">☆☆☆</label>
+        <label><input type="radio" id="star4" name="rating" value="4">☆☆☆☆</label>
+        <label><input type="radio" id="star5" name="rating" value="5">☆☆☆☆☆</label>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="installDate">Date of Installation:</label>
+      <input type="date" id="installDate" name="installDate" required>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Useful Features:</legend>
+        <label><input type="checkbox" id="feature1" name="features" value="Easy to Use"> Easy to Use</label>
+        <label><input type="checkbox" id="feature2" name="features" value="Affordable"> Affordable</label>
+        <label><input type="checkbox" id="feature3" name="features" value="Durable"> Durable</label>
+        <label><input type="checkbox" id="feature4" name="features" value="High Quality"> High Quality</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="writtenReview">Written Review:</label>
+      <textarea id="writtenReview" name="writtenReview" rows="4" cols="50"></textarea>
+
+      <!-- User Name -->
+      <label for="userName">Your Name:</label>
+      <input type="text" id="userName" name="userName">
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Review">
+    </form>
+    </div>
+  </main>
+
+  
+  <footer>
+    <p>&copy; <span id="year"></span> SkillHub. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

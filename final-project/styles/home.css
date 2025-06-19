@@ -1,0 +1,288 @@
+/*=========================
+  Variables
+=========================*/
+:root {
+  --color-primary: #004466;
+  --color-secondary: #EAF3B6;
+  --color-white: #ffffff;
+  --color-dark: #050505;
+  --color-accent: #ff9800;
+  --color-light: #f4f4f4;
+  --font-main: "Poppins", sans-serif;
+}
+
+/*=========================
+  Global Styles
+=========================*/
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+a { text-decoration: none; }
+ul { list-style: none; }
+
+/*=========================
+  Header & Navigation
+=========================*/
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--color-primary);
+  padding: 1rem;
+}
+
+nav {
+  nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: var(--color-primary);
+  width: 100%;
+  overflow-x: hidden;
+}
+}
+.menu-toggle{
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-menu{
+  display: none;
+}
+.nav-links {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-primary); /* optional */
+  width: 100%;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  font-weight: bold;
+}
+.nav-head{color: var(--color-light);
+  display: flex;
+  justify-content: flex-start;
+}
+/*=========================
+  Hero Section
+=========================*/
+.hero {
+  position: relative;
+  text-align: center;
+  color: var(--color-white);
+  min-height: 60vh;
+  background-color: var(--color-dark);
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%; max-width: 500px;
+}
+.hero h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.hero p  { font-size: 1rem; margin-bottom: 1rem; }
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/*=========================
+  Curriculum Section
+=========================*/
+.curriculum {
+  padding: 2rem 1rem;
+}
+.curriculum-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-inline: 5%;
+}
+.card {
+  background-color: var(--color-secondary);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
+.card img {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 80px; height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card h3 { margin-bottom: 0.5rem; }
+.card-info {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+.card-info li { margin-bottom: 0.3rem; font-size: 0.95rem; }
+
+/*=========================
+  Why Choose BlueDoc
+=========================*/
+.section2 {
+  background-color: var(--color-primary);
+  padding: 5% 1rem;
+}
+.section2 h2 {
+  text-align: center;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+.section2 > div {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.point1 {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10%;
+}
+.pointlist ul {
+  padding-left: 1.25rem;
+}
+.pointlist li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+/*=========================
+  About Section
+=========================*/
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: var(--color-white);
+}
+.about-p {
+  max-width: 600px;
+  line-height: 1.6;
+  color: var(--color-dark);
+}
+.about-p .about-link {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+.about img {
+  width: 80%; max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding-top: 10%;
+}
+
+/*=========================
+  Reviews Section
+=========================*/
+.reviews {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.review-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-inline: 10%;
+}
+.review {
+  display: flex;
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 1rem;
+}
+.review-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+.review-text p { margin-bottom: 0.5rem; line-height: 1.4; }
+.review-text span { font-style: italic; color: var(--color-dark); }
+
+/*=========================
+  Form Section
+=========================*/
+form, .form-container {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem auto;
+  width: 90%; max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.fieldset, fieldset { border: none; margin-bottom: 1rem; }
+legend { font-weight: bold; margin-bottom: 0.5rem; }
+label { display: block; margin: 0.5rem 0; }
+input, textarea, select {
+  width: 100%; padding: 0.5rem;
+  border: 1px solid #ccc; border-radius: 5px;
+}
+input[type="submit"] {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border: none; border-radius: 5px;
+  font-weight: bold; cursor: pointer;
+}
+
+/*=========================
+  Footer
+=========================*/
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/*=========================
+  Responsive (>=768px)
+=========================*/
+@media (min-width: 768px) {
+  .nav-links{display: flex;
+    flex-wrap: wrap;
+  justify-content: space-between;}
+  .menu-toggle{display: none;}
+  .nav-menu {
+    display: flex !important;  /* force links visible on desktop */
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .curriculum-grid { flex-direction: row; justify-content: center; }
+  .card { width: 40%; margin-inline: 2%; }
+  .review-grid { flex-direction: row; justify-content: space-between; }
+  .review { flex: 1; }
+  .about { flex-direction: row; justify-content: space-between; padding: 3rem 10%; }
+  .about-p { flex: 0 0 55%; }
+  .about img { flex: 0 0 35%; }
+  .hero h2 { font-size: 2.5rem; }
+  .hero p { font-size: 1.2rem; }
+}
