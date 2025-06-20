@@ -47,6 +47,7 @@ header {
   cursor: pointer;
   z-index: 11;
 }
+.nav-head{color: var(--color-accent);}
 .nav-menu {
   display: none;
   flex-direction: column;
