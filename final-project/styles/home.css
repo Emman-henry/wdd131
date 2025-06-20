@@ -256,7 +256,9 @@ input[type="submit"] {
   border: none; border-radius: 5px;
   font-weight: bold; cursor: pointer;
 }
-
+.excess{
+  display: none;
+}
 /*=========================
   Footer
 =========================*/
@@ -271,6 +273,9 @@ footer {
   Responsive (>=768px)
 =========================*/
 @media (min-width: 768px) {
+  .excess{
+    display: block;
+  }
   .nav-links{display: flex;
     flex-wrap: wrap;
   justify-content: space-between;}
