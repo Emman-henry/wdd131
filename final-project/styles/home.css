@@ -52,7 +52,7 @@ header {
   display: none;
   flex-direction: column;
   align-items: flex-start;
-  background-color:transparent;
+  background-color:rgba(0, 0, 0, 0.6);
   padding: 1rem;
   width: 100%;
   position: absolute;
