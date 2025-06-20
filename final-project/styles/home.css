@@ -9,7 +9,7 @@
   --color-accent: #ff9800;
   --color-light: #f4f4f4;
   --font-main: "Poppins", sans-serif;
-  --sub-font:"Montserrat", sans-serif;
+  --sub-font: "Montserrat", sans-serif;
 }
 
 /*=========================
@@ -30,48 +30,48 @@ ul { list-style: none; }
 =========================*/
 header {
   display: flex;
-  justify-content: space-around;
-  background-color: var(--color-primary);
-  padding: 1rem;
-}
-
-nav {
-  nav {
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-  padding: 1rem;
-  box-sizing: border-box;
   background-color: var(--color-primary);
-  width: 100%;
-  overflow-x: hidden;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
+.menu-toggle {
+  display: block;
+  background: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
 }
-.menu-toggle{
-  display: flex;
-  justify-content: flex-end;
-}
-.nav-menu{
+.nav-menu {
   display: none;
-}
-.nav-links {
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  background-color: var(--color-primary);
   padding: 1rem;
-  background-color: var(--color-primary); /* optional */
   width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
 }
-
-.nav-links a {
+.nav-menu.active {
+  display: flex;
+}
+.nav-menu li a {
   color: var(--color-white);
   font-weight: bold;
+  font-family: var(--sub-font);
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
-.nav-head{color: var(--color-light);
-  display: flex;
-  justify-content: flex-start;
+.nav-menu li a:hover {
+  color: var(--color-accent);
 }
+
 /*=========================
   Hero Section
 =========================*/
@@ -90,13 +90,16 @@ nav {
 }
 .hero-content {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 1.5rem;
   border-radius: 10px;
-  width: 90%; max-width: 500px;
-   margin-top: 90px;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 90px;
+  font-family: var(--sub-font);
 }
 .hero h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 .hero p  { font-size: 1rem; margin-bottom: 1rem; }
@@ -107,9 +110,6 @@ nav {
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   font-weight: bold;
-}
-.hero-content{
-  font-family: var(--sub-font);
 }
 
 /*=========================
@@ -128,13 +128,14 @@ nav {
   background-color: var(--color-secondary);
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: left;
 }
 .card img {
   display: block;
   margin: 0 auto 1rem;
-  width: 80px; height: 80px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -201,9 +202,10 @@ nav {
   font-weight: bold;
 }
 .about img {
-  width: 80%; max-width: 300px;
+  width: 80%;
+  max-width: 300px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding-top: 10%;
 }
 
@@ -225,12 +227,23 @@ nav {
   background-color: var(--color-secondary);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   gap: 1rem;
 }
-.review-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
-.review-text p { margin-bottom: 0.5rem; line-height: 1.4; }
-.review-text span { font-style: italic; color: var(--color-dark); }
+.review-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review-text p {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.review-text span {
+  font-style: italic;
+  color: var(--color-dark);
+}
 
 /*=========================
   Form Section
@@ -240,26 +253,32 @@ form, .form-container {
   padding: 2rem;
   border-radius: 16px;
   margin: 2rem auto;
-  width: 90%; max-width: 600px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .fieldset, fieldset { border: none; margin-bottom: 1rem; }
 legend { font-weight: bold; margin-bottom: 0.5rem; }
 label { display: block; margin: 0.5rem 0; }
 input, textarea, select {
-  width: 100%; padding: 0.5rem;
-  border: 1px solid #ccc; border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 input[type="submit"] {
   background-color: var(--color-accent);
   color: var(--color-white);
   padding: 0.75rem 1.5rem;
-  border: none; border-radius: 5px;
-  font-weight: bold; cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
-.excess{
+.excess {
   display: none;
 }
+
 /*=========================
   Footer
 =========================*/
@@ -274,29 +293,63 @@ footer {
   Responsive (>=768px)
 =========================*/
 @media (min-width: 768px) {
-  .hero-img {
-    height: 30vh;;       /* Shorter height */
-    object-fit: cover;   /* Ensures it fills the width and crops if needed */
+  /*=========================
+  Responsive Styles (>=768px)
+=========================*/
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger on large screens */
   }
-  .excess{
-    display: block;
-  }
-  .nav-links{display: flex;
-    flex-wrap: wrap;
-  justify-content: space-between;}
-  .menu-toggle{display: none;}
-  .nav-menu {
-    display: flex !important;  /* force links visible on desktop */
+
+  nav.nav-menu {
+    display: flex !important;
     flex-direction: row;
-    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+    background: none;
+    width: auto;
+    padding: 0;
   }
-  .curriculum-grid { flex-direction: row; justify-content: center; }
-  .card { width: 40%; margin-inline: 2%; }
-  .review-grid { flex-direction: row; justify-content: space-between; }
-  .review { flex: 1; }
-  .about { flex-direction: row; justify-content: space-between; padding: 3rem 10%; }
-  .about-p { flex: 0 0 55%; }
-  .about img { flex: 0 0 35%; }
-  .hero h2 { font-size: 2.5rem; }
-  .hero p { font-size: 1.2rem; }
+
+  ul.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+  .curriculum-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card {
+    width: 40%;
+    margin-inline: 2%;
+  }
+  .review-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .review {
+    flex: 1;
+  }
+  .about {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 10%;
+  }
+  .about-p {
+    flex: 0 0 55%;
+  }
+  .about img {
+    flex: 0 0 35%;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
 }

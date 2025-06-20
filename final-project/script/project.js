@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.getElementById('nav-menu');
 
   navToggle.addEventListener('click', () => {
-    if (navMenu.style.display === 'none' || navMenu.style.display === '') {
-      navMenu.style.display = 'block';
+    navMenu.classList.toggle('active');
+
+    if (navMenu.classList.contains('active')) {
       navToggle.textContent = '✕';
       navToggle.setAttribute('aria-label', 'Close navigation menu');
     } else {
-      navMenu.style.display = 'none';
       navToggle.textContent = '☰';
       navToggle.setAttribute('aria-label', 'Open navigation menu');
     }
