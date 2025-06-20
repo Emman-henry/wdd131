@@ -273,6 +273,10 @@ footer {
   Responsive (>=768px)
 =========================*/
 @media (min-width: 768px) {
+  .hero-img {
+    height: 30vh;;       /* Shorter height */
+    object-fit: cover;   /* Ensures it fills the width and crops if needed */
+  }
   .excess{
     display: block;
   }
