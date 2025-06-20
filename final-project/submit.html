@@ -31,16 +31,16 @@
     <p>Your review has been submitted successfully.</p>
     <p id="reviewCount"></p>
  
-
-  <footer>
-    <p>&copy; <span id="year"></span> |Emmanuel Henry | WDD 131</p>
+<footer>
+    <p>
+    &copy; <span id="currentyear"></span> Emmanuel Henry, Nigeria
+  </p>
     <p id="lastModified"></p>
   </footer>
-  </main>
-  <footer>
-    <p>&copy; <span id="year"></span> SkillHub. All rights reserved.</p>
-  </footer>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </body>
 
 </html>

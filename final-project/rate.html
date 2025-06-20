@@ -77,11 +77,16 @@
     </div>
   </main>
 
-  
   <footer>
-    <p>&copy; <span id="year"></span> SkillHub. All rights reserved.</p>
+    <p>
+    &copy; <span id="currentyear"></span> Emmanuel Henry, Nigeria
+  </p>
+    <p id="lastModified"></p>
   </footer>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </body>
 
 </html>
