@@ -9,6 +9,7 @@
   --color-accent: #ff9800;
   --color-light: #f4f4f4;
   --font-main: "Poppins", sans-serif;
+  --sub-font:"Montserrat", sans-serif;
 }
 
 /*=========================
@@ -105,6 +106,9 @@ nav {
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   font-weight: bold;
+}
+.hero-content{
+  font-family: var(--sub-font);
 }
 
 /*=========================
